@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sensor Data</h1>
+    <form action="/sensor" method="POST">
+        <input type="text" name="deviceId" placeholder="Device ID" required>
+        <input type="text" name="deviceName" placeholder="Device Name" required>
+        <input type="text" name="location" placeholder="Device Location" required>
+        <input type="text" name="farmName" placeholder="Farm Name" required>
+        
+        
+         <h1>READS_SENSOR</h1>
+
+        <input type="text" name="moisture" placeholder="Moisture Level" required>
+        <input type="text" name="temperature" placeholder="Temperature Level" required>
+        <input type="text" name="conductivity" placeholder="Conductivity Level" required>
+        <input type="text" name="pH" placeholder="pH Level" required>
+        <input type="text" name="nitrogen" placeholder="Nitrogen Level" required>
+        <input type="text" name="phosphorus" placeholder="Phosphorus Level" required>
+        <input type="text" name="potassium" placeholder="Potassium Level" required>
+        <input type="text" name="salinity" placeholder="Salinity Level" required>
+        <input type="text" name="npkRatio" placeholder="NPK Ratio" required>
+        <input type="text" name="soilHealth" placeholder="Soil Health" required>
+        <input type="text" name="additionalInfo" placeholder="Additional Information" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
