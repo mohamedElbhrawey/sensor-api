@@ -10,7 +10,9 @@ const PORT = process.env.PORT || 3000; // استخدم PORT بالحروف ال�
 
 // استيراد نموذج المستخدم
 const user = require('./models/customerSchema.js'); // تأكد من أن مسار الملف صحيح
-const Reads=require('./models/sensorSchema.js')
+const Reads=require('./models/sensorSchema.js');
+const { CLIENT_RENEG_LIMIT } = require('tls');
+const { Console } = require('console');
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
@@ -60,7 +62,9 @@ app.get('/sensor', (req, res) => {
 
 
 app.post('/sensor', (req, res) => {
+  
   const newRead = new Reads(req.body);
+  console.log("READS SENSOR=======",req.body)
   newRead.save()
     .then(() => {
       res.redirect('/sensor');
